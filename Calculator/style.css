@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #e1ded5;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.calculator {
+  display: grid;
+  gap: 10px;
+  width: 350px;
+  padding: 20px;
+  background-color: rgba(239, 175, 192, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#display {
+  grid-column: span 4;
+  height: 100px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: right;
+  font-size: 36px;
+  padding: 15px;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+button {
+  height: 60px;
+  width: 60px;
+  border: 0;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #EFAFC0;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Specific styling for equal button */
+button#equal {
+  height: 130px;
+  background-color: #b9375e;
+  color: white;
+  grid-row: span 2;
+}
+
+/* Clear button */
+.calculator button#clear {
+  background-color: #b9375e;
+  color: white;
+}
+
+/* Zero button */
+button#0 {
+  width: 150px;
+  grid-column: span 2;
+}
+
+/* Operator buttons */
+.calculator button.btn-opperator {
+  background-color: #EFAFC0;
+  color: white;
+}
+
+button:hover {
+  background-color: #d28d9d;
+}
+
+button:active {
+  background-color: #b9375e;
+}
+
+button#clear:hover {
+  background-color: #9b2c48;
+}
+
+button#equal:hover {
+  background-color: #9b2c48;
+}
